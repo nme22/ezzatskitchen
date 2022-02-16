@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import { lazy } from 'react';
 
 export default function Home() {
    return (
@@ -28,9 +27,27 @@ export default function Home() {
             ullamco mollit reprehenderit eiusmod ex nulla aute nisi.
          </p>
          <div className="shirazImg">
-            <Image src="/shiraz.png" width={400} height={400} alt="shiraz" />
-            <Image src="/shiraz.png" width={400} height={400} alt="shiraz" />
-            <Image src="/shiraz.png" width={400} height={400} alt="shiraz" />
+            <Image
+               src="/shiraz.png"
+               className="iranImage"
+               width={400}
+               height={400}
+               alt="shiraz"
+            />
+            <Image
+               src="/baclava.jpeg"
+               className="iranImage"
+               width={400}
+               height={400}
+               alt="baclava"
+            />
+            <Image
+               className="iranImage"
+               src="/tahdig.jpeg"
+               width={400}
+               height={400}
+               alt="Tahdig"
+            />
          </div>
       </div>
    );

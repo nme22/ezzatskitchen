@@ -26,11 +26,20 @@ a {
 
 .shirazImg {
    display: flex;
-   justify-content: space-around;
+   justify-content: space-evenly;
+   padding: auto;
 }
 
 .title {
    text-align: center;
+   font-weight: bold;
+   font-family: fantasy;
+}
+
+.iranImage {
+   border-radius: 10%;
+   border-color: black;
+   border-width: 2px;
 }
 
 * {
