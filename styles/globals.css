@@ -41,6 +41,51 @@ a {
    border-color: black;
    border-width: 2px;
 }
+.appName {
+   align-self: center;
+}
+
+.loginNavbar {
+   display: flex;
+   justify-content: space-between;
+   background-color: #d86565;
+   padding: 10px;
+   padding-top: -50px;
+   height: 50px;
+   color: antiquewhite;
+   font-size: large;
+}
+
+.loginTitle {
+   background-color: #d86565;
+   border-radius: 5%;
+   border-width: 1px;
+   display: flex;
+   flex-direction: column;
+   width: 300px;
+   height: 300px;
+   text-align: center;
+   font-weight: bold;
+   font-family: fantasy;
+   margin: 10px;
+   padding: 10px;
+   align-items: center;
+}
+.center {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+}
+.inputField {
+   background-color: antiquewhite;
+   border-radius: 5%;
+}
+
+.button {
+   border-radius: 10%;
+   background-color: gray;
+   color: antiquewhite;
+}
 
 * {
    box-sizing: border-box;
