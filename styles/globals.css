@@ -82,7 +82,10 @@ a {
 }
 
 .button {
-   border-radius: 10%;
+   border-radius: 5%;
+   border-width: thin;
+   border-style: double;
+   border-color: antiquewhite;
    background-color: gray;
    color: antiquewhite;
 }

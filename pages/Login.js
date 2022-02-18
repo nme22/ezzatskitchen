@@ -1,7 +1,17 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Login() {
+   const [username, setUsername] = useState('');
+   const [password, setPassword] = useState('');
+
+   function handleUsername(e) {
+      setUsername(e.target.value);
+   }
+   function handlePassword(e) {
+      setPassword(e.target.value);
+   }
    return (
       <div>
          <Head>
@@ -19,11 +29,22 @@ export default function Login() {
          <h1 className="title">Log Into Your Account!</h1>
          <div className="center">
             <form className="loginTitle">
-               <label>Username:</label>
-               <input className="inputField" />
+               <label>Email:</label>
+               <input
+                  className="inputField"
+                  placeholder="JohnDoe@gmail.com"
+                  value={username}
+                  onChange={handleUsername}
+                  type="text"
+               />
                <br />
                <label>Passoword:</label>
-               <input className="inputField" />
+               <input
+                  className="inputField"
+                  type="password"
+                  value={password}
+                  onChange={handlePassword}
+               />
                <br />
                <button className="button">Sign In</button>
                <br />
