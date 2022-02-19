@@ -1,17 +1,19 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { supabase } from '../utils/supabaseClient';
+import Auth from '../components/Auth';
 
 export default function Login() {
-   const [username, setUsername] = useState('');
-   const [password, setPassword] = useState('');
+   const [session, setSession] = useState(null);
 
-   function handleUsername(e) {
-      setUsername(e.target.value);
-   }
-   function handlePassword(e) {
-      setPassword(e.target.value);
-   }
+   useEffect(() => {
+      setSession(supabase.auth.session());
+
+      supabase.auth.onAuthStateChange((_event, session) => {
+         setSession(session);
+      });
+   }, []);
    return (
       <div>
          <Head>
@@ -26,30 +28,14 @@ export default function Login() {
             <h2 className="appName">Ezzat's Kitchen</h2>
             <Link href="/">Back</Link>
          </nav>
-         <h1 className="title">Log Into Your Account!</h1>
-         <div className="center">
-            <form className="loginTitle">
-               <label>Email:</label>
-               <input
-                  className="inputField"
-                  placeholder="JohnDoe@gmail.com"
-                  value={username}
-                  onChange={handleUsername}
-                  type="text"
-               />
-               <br />
-               <label>Passoword:</label>
-               <input
-                  className="inputField"
-                  type="password"
-                  value={password}
-                  onChange={handlePassword}
-               />
-               <br />
-               <button className="button">Sign In</button>
-               <br />
-               <button className="button">Create Account</button>
-            </form>
+         <h1 className="title">Log Into Ezzats Kitchen!</h1>
+
+         <div style={{ padding: '50px 0 100px 0' }}>
+            {!session ? (
+               <Auth />
+            ) : (
+               <Account key={session.user.id} session={session} />
+            )}
          </div>
       </div>
    );
