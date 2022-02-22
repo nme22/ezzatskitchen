@@ -64,48 +64,55 @@ export default function Account({ session }) {
    }
 
    return (
-      <div className="loggedTitle">
-         <h3>Welcome back {username}! </h3>
-         <Avatar
-            url={avatar_url}
-            size={150}
-            onUpload={(url) => {
-               setAvatarUrl(url);
-               updateProfile({ username, avatar_url: url });
-            }}
-         />
-
-         <div>
-            <label htmlFor="email">Email</label>
-            <input id="email" type="text" value={session.user.email} disabled />
-         </div>
-         <div>
-            <label htmlFor="username">Name</label>
-            <input
-               id="username"
-               type="text"
-               value={username || ''}
-               onChange={(e) => setUsername(e.target.value)}
+      <div className="center">
+         <div className="loggedTitle">
+            <h3>Welcome back {username}! </h3>
+            <Avatar
+               url={avatar_url}
+               size={150}
+               onUpload={(url) => {
+                  setAvatarUrl(url);
+                  updateProfile({ username, avatar_url: url });
+               }}
             />
-         </div>
 
-         <div>
-            <button
-               className="button block primary"
-               onClick={() => updateProfile({ username, avatar_url })}
-               disabled={loading}
-            >
-               {loading ? 'Loading ...' : 'Update'}
-            </button>
-         </div>
+            <div>
+               <label htmlFor="email">Email</label>
+               <input
+                  id="email"
+                  type="text"
+                  value={session.user.email}
+                  disabled
+               />
+            </div>
+            <div>
+               <label htmlFor="username">Name</label>
+               <input
+                  id="username"
+                  type="text"
+                  value={username || ''}
+                  onChange={(e) => setUsername(e.target.value)}
+               />
+            </div>
 
-         <div>
-            <button
-               className="button block"
-               onClick={() => supabase.auth.signOut()}
-            >
-               Sign Out
-            </button>
+            <div>
+               <button
+                  className="button block primary"
+                  onClick={() => updateProfile({ username, avatar_url })}
+                  disabled={loading}
+               >
+                  {loading ? 'Loading ...' : 'Update'}
+               </button>
+            </div>
+
+            <div>
+               <button
+                  className="button block"
+                  onClick={() => supabase.auth.signOut()}
+               >
+                  Sign Out
+               </button>
+            </div>
          </div>
       </div>
    );

@@ -29,7 +29,12 @@ export default function Login() {
                <h2 className="appName"></h2>
                <Link href="/">Back</Link>
             </nav>
-            <h1 className="title">Log Into Ezzats Kitchen!</h1>
+            {!session ? (
+               <h1 className="title">Log Into Ezzat's Kitchen!</h1>
+            ) : (
+               <h1 className="title">So good to see you again!</h1>
+            )}
+
             {!session ? (
                <Auth />
             ) : (
