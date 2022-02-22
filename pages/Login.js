@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { supabase } from '../utils/supabaseClient';
 import Auth from '../components/Auth';
+import Account from '../components/Account';
 
 export default function Login() {
    const [session, setSession] = useState(null);
@@ -23,14 +24,12 @@ export default function Login() {
                content="initial-scale=1.0, width=device-width"
             />
          </Head>
-
-         <nav className="loginNavbar">
-            <h2 className="appName">Ezzat's Kitchen</h2>
-            <Link href="/">Back</Link>
-         </nav>
-         <h1 className="title">Log Into Ezzats Kitchen!</h1>
-
-         <div style={{ padding: '50px 0 100px 0' }}>
+         <div>
+            <nav className="loginNavbar">
+               <h2 className="appName"></h2>
+               <Link href="/">Back</Link>
+            </nav>
+            <h1 className="title">Log Into Ezzats Kitchen!</h1>
             {!session ? (
                <Auth />
             ) : (

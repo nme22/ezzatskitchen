@@ -71,6 +71,22 @@ a {
    padding: 10px;
    align-items: center;
 }
+.loggedTitle {
+   background-color: #d86565;
+   border-radius: 5%;
+   border-width: 1px;
+   display: flex;
+   justify-content: space-evenly;
+   flex-direction: column;
+   width: 30%;
+   height: 30%;
+   text-align: center;
+   font-weight: bold;
+   font-family: fantasy;
+   margin: 10px;
+   padding: 10px;
+   align-items: center;
+}
 .center {
    display: flex;
    justify-content: center;
