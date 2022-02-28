@@ -1,34 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+<h1 align="center">Ezzat's Kitchen </h1>
 
-First, run the development server:
+![badge](https://img.shields.io/badge/license-NME-blue)<br />
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Description
+	To provide authentic Iranian cuisine to anyone willing to purchase it!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+-[Technologies](#technologies)
+- [Tests](#tests)
+- [Questions](#questions)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Installation
+    
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Usage
+    To get Iranian food to your door.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## License
+    NME
+    This project has a  NME license.
 
-## Learn More
+## Contributing
+    Navid M Ebrahimi
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies
+    Next.js and Vanilla CSS
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tests
+    yes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Questions
+    Reach out via email!
+    
+## Github Username
 
-## Deploy on Vercel
+    Follow me on Github: [nme22] ((https://github.com/nme22))
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Github Email
+	Feel free to reachout via: navidmebrahimi22@gmail.com
+	
+README created with [README-Generator] (https://github.com/nme22/README-Generator)
+	
