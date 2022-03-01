@@ -114,7 +114,7 @@ a {
 }
 
 .itemsContainer {
-   background-color: #d86565;
+   background-image: url('/shiraz.png');
    border-color: black;
    border-width: 2px;
    display: flex;
