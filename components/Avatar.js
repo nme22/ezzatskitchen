@@ -59,7 +59,7 @@ export default function Avatar({ url, size, onUpload }) {
             <img
                src={avatarUrl}
                alt="Avatar"
-               className="avatar image"
+               className="avatarImg"
                style={{ height: size, width: size }}
             />
          ) : (

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../utils/supabaseClient';
 import Avatar from './Avatar';
+import Item from './item';
 
 export default function Account({ session }) {
    const [loading, setLoading] = useState(true);
@@ -64,54 +65,81 @@ export default function Account({ session }) {
    }
 
    return (
-      <div className="center">
-         <div className="loggedTitle">
-            <h3>Welcome back {username}! </h3>
-            <Avatar
-               url={avatar_url}
-               size={150}
-               onUpload={(url) => {
-                  setAvatarUrl(url);
-                  updateProfile({ username, avatar_url: url });
-               }}
-            />
-
-            <div>
-               <label htmlFor="email">Email</label>
-               <input
-                  id="email"
-                  type="text"
-                  value={session.user.email}
-                  disabled
+      <div>
+         <div className="center">
+            <div className="loggedTitle">
+               <h3>Welcome back {username}! </h3>
+               <Avatar
+                  url={avatar_url}
+                  size={150}
+                  onUpload={(url) => {
+                     setAvatarUrl(url);
+                     updateProfile({ username, avatar_url: url });
+                  }}
                />
+
+               <div>
+                  <label htmlFor="email">Email</label>
+                  <input
+                     id="email"
+                     type="text"
+                     value={session.user.email}
+                     disabled
+                  />
+               </div>
+               <div>
+                  <label htmlFor="username">Name</label>
+                  <input
+                     id="username"
+                     type="text"
+                     value={username || ''}
+                     onChange={(e) => setUsername(e.target.value)}
+                  />
+               </div>
+
+               <div>
+                  <button
+                     className="button block primary"
+                     onClick={() => updateProfile({ username, avatar_url })}
+                     disabled={loading}
+                  >
+                     {loading ? 'Loading ...' : 'Update'}
+                  </button>
+               </div>
+
+               <div>
+                  <button
+                     className="button block"
+                     onClick={() => supabase.auth.signOut()}
+                  >
+                     Sign Out
+                  </button>
+               </div>
             </div>
-            <div>
-               <label htmlFor="username">Name</label>
-               <input
-                  id="username"
-                  type="text"
-                  value={username || ''}
-                  onChange={(e) => setUsername(e.target.value)}
+         </div>
+         <div className="center">
+            <div className="itemsContainer">
+               <Item
+                  className="center"
+                  name="Baklava"
+                  description="A puff pasty with honey and pistachios"
+                  price="$5.00"
+                  picture="/baclava.jpeg"
                />
-            </div>
-
-            <div>
-               <button
-                  className="button block primary"
-                  onClick={() => updateProfile({ username, avatar_url })}
-                  disabled={loading}
-               >
-                  {loading ? 'Loading ...' : 'Update'}
-               </button>
-            </div>
-
-            <div>
-               <button
-                  className="button block"
-                  onClick={() => supabase.auth.signOut()}
-               >
-                  Sign Out
-               </button>
+               <Item
+                  className="center"
+                  name="Lubia Polo"
+                  description="Seasoned rice with ground beef and string beans"
+                  price="$12.59"
+                  picture="/lubiaPolo.jpeg"
+               />
+               <Item
+                  className="center"
+                  name="Tahdig"
+                  description="Crunchy rice from the bottom of the pot"
+                  price="$7.00"
+                  picture="/tahdig.jpeg"
+               />
             </div>
          </div>
       </div>

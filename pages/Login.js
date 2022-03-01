@@ -26,7 +26,12 @@ export default function Login() {
          </Head>
          <div>
             <nav className="loginNavbar">
-               <h2 className="appName"></h2>
+               {!session ? (
+                  <h2 className="appName">Ezzat's Kitchen</h2>
+               ) : (
+                  <h2 className="appName">Welcome Back!</h2>
+               )}
+
                <Link href="/">Back</Link>
             </nav>
             {!session ? (
