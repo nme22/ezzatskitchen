@@ -142,6 +142,9 @@ a {
    align-items: center;
    flex-wrap: wrap;
 }
+.about {
+   background-color: #d86565;
+}
 
 * {
    box-sizing: border-box;
