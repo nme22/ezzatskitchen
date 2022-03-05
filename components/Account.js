@@ -68,7 +68,7 @@ export default function Account({ session }) {
       <div>
          <div className="center">
             <div className="loggedTitle">
-               <h3>Welcome back {username}! </h3>
+               <h4>Welcome back {username}! </h4>
                <Avatar
                   url={avatar_url}
                   size={150}
@@ -97,24 +97,20 @@ export default function Account({ session }) {
                   />
                </div>
 
-               <div>
-                  <button
-                     className="button block primary"
-                     onClick={() => updateProfile({ username, avatar_url })}
-                     disabled={loading}
-                  >
-                     {loading ? 'Loading ...' : 'Update'}
-                  </button>
-               </div>
+               <button
+                  className="button"
+                  onClick={() => updateProfile({ username, avatar_url })}
+                  disabled={loading}
+               >
+                  {loading ? 'Loading ...' : 'Update'}
+               </button>
 
-               <div>
-                  <button
-                     className="button block"
-                     onClick={() => supabase.auth.signOut()}
-                  >
-                     Sign Out
-                  </button>
-               </div>
+               <button
+                  className="button block"
+                  onClick={() => supabase.auth.signOut()}
+               >
+                  Sign Out
+               </button>
             </div>
          </div>
          <div className="center">

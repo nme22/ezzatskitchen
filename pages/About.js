@@ -14,7 +14,7 @@ export default function About() {
                <Image
                   src="/baclava.jpeg"
                   className="iranImage"
-                  width={200}
+                  width={100}
                   height={200}
                   alt="shiraz"
                />
