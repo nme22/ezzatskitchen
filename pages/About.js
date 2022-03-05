@@ -12,9 +12,9 @@ export default function About() {
             <article className="about">
                <h1 className="center">A little about Ezzat</h1>
                <Image
-                  src="/baclava.jpeg"
+                  src="/iran-flag.jpeg"
                   className="iranImage"
-                  width={100}
+                  width={200}
                   height={200}
                   alt="shiraz"
                />
