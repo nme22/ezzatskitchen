@@ -18,7 +18,7 @@ export default function Login() {
    return (
       <div>
          <Head>
-            <title> Login Ezzat's Kitchen</title>
+            <title> Login {"Ezzat's"} Kitchen</title>
             <meta
                name="viewport"
                content="initial-scale=1.0, width=device-width"
@@ -27,7 +27,7 @@ export default function Login() {
 
          <nav className="loginNavbar">
             {!session ? (
-               <h2 className="appName">Ezzat's Kitchen</h2>
+               <h2 className="appName">{"Ezzat's"} Kitchen</h2>
             ) : (
                <h2 className="appName">Welcome Back!</h2>
             )}
@@ -37,7 +37,7 @@ export default function Login() {
             <Link href="/">Back</Link>
          </nav>
          {!session ? (
-            <h1 className="title">Log Into Ezzat's Kitchen!</h1>
+            <h1 className="title">Log Into{" Ezzat's"} Kitchen!</h1>
          ) : (
             <h1 className="title">So good to see you again!</h1>
          )}
