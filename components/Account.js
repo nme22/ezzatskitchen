@@ -65,7 +65,7 @@ export default function Account({ session }) {
    }
 
    return (
-      <div>
+      <main>
          <div className="center">
             <div className="loggedTitle">
                <h4>Welcome back {username}! </h4>
@@ -138,6 +138,6 @@ export default function Account({ session }) {
                />
             </div>
          </div>
-      </div>
+      </main>
    );
 }

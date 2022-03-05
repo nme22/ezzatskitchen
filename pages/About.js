@@ -8,19 +8,21 @@ export default function About() {
             <Link href="/Login">Login</Link>
             <Link href="/">Back</Link>
          </nav>
+
          <div className="center">
             <article className="about">
+               <div className="shirazImg">
+                  <Image
+                     src="/iran-flag.jpeg"
+                     className="iranImage"
+                     width={500}
+                     height={300}
+                     alt="shiraz"
+                  />
+               </div>
                <h1 className="center">A little about Ezzat</h1>
-               <Image
-                  src="/iran-flag.jpeg"
-                  className="iranImage"
-                  width={200}
-                  height={200}
-                  alt="shiraz"
-               />
 
-               <p>
-                  {' '}
+               <p className="pictureText">
                   Ezzat is an Iranian immigrant from Abadan, Iran. She became an
                   American citizen in the 1980's and ended up settling in
                   Queens, New York. There created a loving family and two first

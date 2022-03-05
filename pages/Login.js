@@ -24,28 +24,29 @@ export default function Login() {
                content="initial-scale=1.0, width=device-width"
             />
          </Head>
-         <div>
-            <nav className="loginNavbar">
-               {!session ? (
-                  <h2 className="appName">Ezzat's Kitchen</h2>
-               ) : (
-                  <h2 className="appName">Welcome Back!</h2>
-               )}
 
-               <Link href="/">Back</Link>
-            </nav>
+         <nav className="loginNavbar">
             {!session ? (
-               <h1 className="title">Log Into Ezzat's Kitchen!</h1>
+               <h2 className="appName">Ezzat's Kitchen</h2>
             ) : (
-               <h1 className="title">So good to see you again!</h1>
+               <h2 className="appName">Welcome Back!</h2>
             )}
 
-            {!session ? (
-               <Auth />
-            ) : (
-               <Account key={session.user.id} session={session} />
-            )}
-         </div>
+            <Link href="/Cart">Cart</Link>
+            <Link href="/About">About</Link>
+            <Link href="/">Back</Link>
+         </nav>
+         {!session ? (
+            <h1 className="title">Log Into Ezzat's Kitchen!</h1>
+         ) : (
+            <h1 className="title">So good to see you again!</h1>
+         )}
+
+         {!session ? (
+            <Auth />
+         ) : (
+            <Account key={session.user.id} session={session} />
+         )}
       </div>
    );
 }
