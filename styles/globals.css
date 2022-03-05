@@ -20,7 +20,7 @@ a {
 
 .navbar {
    display: flex;
-   justify-content: space-around;
+   justify-content: flex-end;
    align-items: flex-end;
    gap: 10px;
    background-color: #d86565;
@@ -55,13 +55,14 @@ a {
 
 .loginNavbar {
    display: flex;
-   justify-content: space-between;
+   justify-content: flex-end;
    background-color: #d86565;
    padding: 10px;
    padding-top: -50px;
    height: 50px;
    color: antiquewhite;
    font-size: large;
+   gap: 10px;
 }
 
 .loginTitle {
@@ -170,8 +171,8 @@ a {
    background-size: cover;
    color: white;
    word-spacing: 1px;
-   padding: 4px;
-   height: full;
+   padding: 100px;
+   height: 1000px;
    width: full;
    font-size: large;
    font-weight: 300;
