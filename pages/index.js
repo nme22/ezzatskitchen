@@ -18,7 +18,7 @@ export default function Home() {
             <Link href="/Contact">Contact</Link>
          </nav>
          <h1 className="title">Welcome To Ezzat&apos;s Kitchen!</h1>
-         <h2 className="title">"A Taste Of Shiraz"</h2>
+         <h2 className="title">&apos;A Taste Of Shiraz&apos;</h2>
          <p className="title">
             Sunt ea ex cupidatat dolore. Consequat exercitation consequat tempor
             cillum fugiat culpa. Ullamco eiusmod sint ea anim pariatur. Veniam
