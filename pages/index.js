@@ -6,7 +6,7 @@ export default function Home() {
    return (
       <div>
          <Head>
-            <title>{"Ezzat's"} Kitchen</title>
+            <title>Ezzat&apos;s Kitchen</title>
             <meta
                name="viewport"
                content="initial-scale=1.0, width=device-width"
@@ -17,7 +17,7 @@ export default function Home() {
             <Link href="/About">About</Link>
             <Link href="/Contact">Contact</Link>
          </nav>
-         <h1 className="title">Welcome To {"Ezzat's"} Kitchen!</h1>
+         <h1 className="title">Welcome To Ezzat&apos;s Kitchen!</h1>
          <h2 className="title">"A Taste Of Shiraz"</h2>
          <p className="title">
             Sunt ea ex cupidatat dolore. Consequat exercitation consequat tempor

@@ -24,7 +24,7 @@ export default function About() {
 
                <p className="pictureText">
                   Ezzat is an Iranian immigrant from Abadan, Iran. She became an
-                  American citizen in the {"1980's "} and ended up settling in
+                  American citizen in the 1980&apos;s and ended up settling in
                   Queens, New York. There created a loving family and two first
                   generations of Iranian Americans. While raising her kids, she
                   noticed the American culture tends to lean towards foods with
