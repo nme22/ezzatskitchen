@@ -36,6 +36,7 @@ export default function Auth() {
                   placeholder="Your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  autoComplete="email"
                />
             </div>
             <div>
