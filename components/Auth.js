@@ -45,7 +45,7 @@ export default function Auth() {
                      e.preventDefault();
                      handleLogin(email);
                   }}
-                  className="button block"
+                  className="button"
                   disabled={loading}
                >
                   <span>{loading ? 'Loading' : 'Send magic link'}</span>

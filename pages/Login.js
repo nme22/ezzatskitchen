@@ -35,7 +35,7 @@ export default function Login() {
          {!session ? (
             <h1 className="title">Log Into Ezzat&apos;s Kitchen!</h1>
          ) : (
-            <h1 className="title">So good to see you again!</h1>
+            ''
          )}
 
          {!session ? (
